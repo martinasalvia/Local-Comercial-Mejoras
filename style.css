@@ -1,0 +1,870 @@
+:root {
+  --brand: #d6a4a4;
+  --bg: #ffffff;
+  --text: #111;
+}
+
+/* -------------------- RESET Y BASE -------------------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* -------------------- TOPBAR -------------------- */
+.topbar{
+  background: black;
+  border-bottom:1px solid #e6e1df;
+  font-size:13px;
+  color: white;
+}
+.topbar-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:6px 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* -------------------- HEADER -------------------- */
+.site-header{
+  background: #fff;
+  border-bottom:1px solid #efebe8;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:14px 16px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* -------------------- NAV -------------------- */
+.main-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items: center;
+  gap:30px;
+}
+.main-nav a{
+  text-decoration:none;
+  color:#111;
+  font-weight:600;
+  font-size:13px;
+  padding:6px 8px;
+}
+nav ul li a:hover { color: #d6a4a4; }
+.main-nav a.active {
+  color: var(--brand);
+  font-weight: bold;
+  border-bottom: 2px solid var(--brand);
+}
+
+/* -------------------- LOGO -------------------- */
+.logo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo img {
+  width: 70%;
+  max-width: 100px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+/* -------------------- BANNER PRINCIPAL -------------------- */
+.banner{
+  width:100%;
+  min-height: 560px;
+  background-image: url("img/banner1.jpg"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+}
+
+.banner2{
+  min-height: 350px;
+}
+
+.banner-overlay{
+  width:100%;
+  background: linear-gradient(to top, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  padding: 30px 16px;
+  display:flex;
+  justify-content: flex-end;
+  max-width:1200px;
+  margin:0 auto;
+}
+.banner-cta{
+  display:flex;
+  align-items: flex-end;
+  background:#fff;
+  color:#111;
+  padding:12px 18px;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:700;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+.banner-cta:hover { color: #d6a4a4; }
+
+/* -------------------- PRODUCTOS (HOME) -------------------- */
+products-section{ padding:40px 0; } 
+.container{ max-width:1200px; margin:0 auto; padding:0 16px; }
+
+.product-grid{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:18px;
+}
+.product-card{
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  text-align:left;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+}
+.product-card .product-img img{
+  width:100%;
+  display:block;
+  height:320px;
+  object-fit:cover;
+}
+.product-info{ padding:12px; }
+.product-name{ font-weight:600; margin-bottom:6px; }
+.product-price{ color:#666; font-size:14px; }
+
+/* -------------------- PROMO GRANDE -------------------- */
+.promo-large{ margin-top:32px; }
+.promo-img img{
+  width:100%;
+  display:block;
+  height:420px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* -------------------- BANDA PROMO -------------------- */
+.promo-band {background:#f4e3e6; width: 100%; padding: 24px ; margin: 24px 0; text-align: center;}
+.band-inner{ text-align:center;  max-width: 1200px; margin: 0 auto;}
+.band-inner h3{ margin:0 0 8px; font-size:20px; letter-spacing:2px; }
+
+/* -------------------- BOTÓN DISCOVER -------------------- */
+.boton-discover {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.botondiscover-overlay{
+  width:100%;
+  background: linear-gradient(to top, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width:300px;
+  margin:0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.botondiscover-cta {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 90%;   /* nunca se desborda */
+  text-align: center;
+  margin: 0 auto;   /* lo centra */
+}
+
+.botondiscover-cta:hover { color: #d6a4a4; }
+
+/* -------------------- CATEGORÍAS -------------------- */
+.container { padding: 50px 0; background: #fff; }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.category-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.category-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.category-card:hover img { transform: scale(1.05); }
+
+.category-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 8px 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+/* -------------------- ARMÁ TU OUTFIT -------------------- */
+.outfit {
+  background: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+.outfit h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.outfit-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+.outfit-item img:hover { transform: scale(1.05); }
+.item-name { margin: 10px 0 4px; font-weight: 600; }
+.item-price { color: #666; font-size: 14px; }
+.outfit-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.outfit-item a:hover img { transform: scale(1.05); }
+.outfit-item a p { margin: 0; }
+
+/* -------------------- FOOTER -------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.site-footer {
+  background: #fff;
+  padding: 45px 0; 
+  border-top: 1px solid #e8e2dd;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Columnas internas */
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.footer-left p,
+.footer-center p,
+.footer-right p {
+  margin: 4px 0;
+  word-break: break-word;
+}
+
+/* Enlaces */
+.footer-right {
+  text-align: center;
+}
+
+.footer-right a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 4px;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+
+/* -------------------- GALERÍA -------------------- */
+.gallery { width: 100%; padding: 20px 0; }
+.gallery-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+.gallery .container { width: 100%; max-width: none; padding: 0; margin: 0; }
+.gallery .thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.gallery .thumb-grid li { overflow: hidden; }
+.gallery .thumb-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.gallery .thumb-grid img:hover { transform: scale(1.05); }
+
+
+
+
+
+/* -------------------- BANNER SECUNDARIO -------------------- */
+.banner2{
+  width:100%;
+  height: 450px;
+  background-image: url("img/banner2denim.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+}
+.banner2-overlay{
+  width: 100%;
+  background: linear-gradient(to top, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  padding: 30px 16px;
+  display:flex;
+  justify-content: center;
+  max-width:1200px;
+  margin:0 auto;
+}
+.banner2-cta{
+  display:flex;
+  align-items: center;
+  background:#fff;
+  color:#111;
+  padding:12px 18px;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:700;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+.banner2-cta:hover { color: #d6a4a4; }
+
+/* -------------------- INDUMENTARIA -------------------- */
+.titulo-indumentaria {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  letter-spacing: 1px;
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 40px 60px;
+}
+.producto {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.producto:hover { transform: scale(1.03); }
+.producto img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.producto h3 {
+  margin: 12px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.precio { color: #666; font-size: 14px; }
+
+
+/* -------------------- CONTACTO -------------------- */
+.contacto {
+  background-color: #f9f4f4;
+  padding: 60px 40px; 
+  text-align: center;
+}
+
+.contacto-titulo {
+  font-size: 28px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.contacto-opciones {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.contacto-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  width: 300px;
+}
+.contacto-card h3 { margin-bottom: 10px; font-size: 18px; }
+.contacto-card p { font-size: 14px; color: #555; margin-bottom: 15px; }
+.btn-contacto {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #d6a4a4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.info-contacto { flex: 1; min-width: 250px; margin-bottom: 20px; }
+.suscripcion { flex: 1; min-width: 250px; }
+.suscripcion form { display: flex; gap: 10px; margin: 10px 0; }
+.suscripcion input {
+  flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;
+}
+.suscripcion button {
+  padding: 8px 16px; background-color: #d6a4a4; color: #fff; border: none; border-radius: 4px; cursor: pointer;
+}
+.redes a { color: #d6a4a4; text-decoration: none; font-weight: bold; }
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.formulario-contacto h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--brand);
+}
+.formulario-contacto p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.formulario .form-group {
+  margin-bottom: 20px;
+}
+.formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.formulario textarea {
+  resize: vertical;
+}
+.formulario button {
+  background-color: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.formulario button:hover {
+  background-color: #c78585;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.modal.hidden { display: none; }
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.modal-content h2 {
+  color: var(--brand);
+  margin-bottom: 15px;
+}
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.site-footer {
+  margin-top: 0;
+}
+
+
+/* -------------------- STORES -------------------- */
+.locales {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #fdfdfd;
+}
+.titulo-locales {
+  font-size: 28px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.subtitulo-locales {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #d6a4a4;
+}
+.descripcion-locales {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+.locales-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+.local-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+}
+.local-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* -------------------- NOSOTROS -------------------- */
+.nosotros {
+  padding: 60px 40px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+.nosotros-titulo {
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #d6a4a4;
+}
+.nosotros-texto {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+.nosotros-texto p { margin-bottom: 20px; }
+.firma {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 40px;
+  color: #000;
+}
+
+/* -------------------- MENÚ MÓVIL -------------------- */
+.menu-btn {
+  display: none; 
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--brand);
+  padding: 8px;
+  margin-left: auto; 
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Banner principal */
+@media (max-width: 992px) {
+  .banner {
+    min-height: 460px;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    min-height: 420px;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    min-height: 360px;
+    background-position: center 30%;
+  }
+}
+
+/* Summer Collection - botón Discover now */
+@media (max-width: 992px) {
+  .botondiscover-overlay {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .botondiscover-cta {
+    font-size: 16px;
+    padding: 10px 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .botondiscover-overlay {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .botondiscover-cta {
+    font-size: 15px;
+    padding: 10px 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .botondiscover-overlay {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .botondiscover-cta {
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 100%;
+  }
+}
+
+/* Indumentaria - grilla de productos */
+@media (max-width: 992px) {
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 24px 12px;
+  }
+
+  .product-card img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .product-card h4 {
+    font-size: 16px;
+  }
+
+  .product-card .price {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 20px 10px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .product-card h4 {
+    font-size: 15px;
+  }
+
+  .product-card .price {
+    font-size: 14px;
+  }
+
+  .cantidad-control {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--brand);
+  }
+
+  .main-nav ul {
+    display: none; 
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+
+  .main-nav ul.activo {
+    display: flex; /* aparece al apretar el botón */
+  }
+
+  .header-inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .gallery {
+    padding: 15px 0;
+  }
+
+  .gallery-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .gallery .thumb-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+    max-width: 900px;
+  }
+
+  .gallery .thumb-grid img {
+    height: 150px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .gallery {
+    padding: 10px 0;
+  }
+
+  .gallery-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .gallery .thumb-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 6px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .gallery .thumb-grid img {
+    height: 130px; 
+    border-radius:4px;
+    }
+}
+
